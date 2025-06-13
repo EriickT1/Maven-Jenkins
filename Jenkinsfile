@@ -9,7 +9,8 @@ pipeline {
     stages {
         stage('Clonar') {
             steps {
-                git 'https://github.com/EriickT1/Maven-Jenkins.git'
+                git branch: 'main',
+                url: 'https://github.com/EriickT1/Maven-Jenkins.git'
             }
         }
 
