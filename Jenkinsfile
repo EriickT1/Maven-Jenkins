@@ -9,8 +9,9 @@ pipeline {
     stages {
         stage('Clonar') {
             steps {
-                git branch: 'main',
-                url: 'https://github.com/EriickT1/Maven-Jenkins.git'
+                checkout([$class: 'GitSCM',
+                 branches: [[name: '*/main']], // Cambia a tu rama
+                 userRemoteConfigs: [[url: 'https://github.com/tu_usuario/saludoapp.git']]])
             }
         }
 
