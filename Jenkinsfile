@@ -10,7 +10,7 @@ pipeline {
         stage('Clonar') {
             steps {
                 checkout([$class: 'GitSCM',
-                 branches: [[name: '*/main']], // Cambia a tu rama
+                 branches: [[name: '*/main']], // asdasdasd
                  userRemoteConfigs: [[url: 'https://github.com/EriickT1/Maven-Jenkins.git']]])
             }
         }
